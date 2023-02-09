@@ -38,7 +38,7 @@ VALUES
     (
         'dessert',
         'apple roses',
-        'apples'
+        'apples',
         '2 Red Delicious apples, puff pastry, lemon juice, all-purpose flour,
         apricot preserves, ground cinnamon, confectionery sugar'
     ),
@@ -56,6 +56,7 @@ VALUES
         'ribeye steak',
         'tender ribeye steak, provolone cheese, carmalized onions, garlic butter, hoagie roll'
     ),
+    (
         'breakfast',
         'breakfast burrito',
         'turkey sausage',
