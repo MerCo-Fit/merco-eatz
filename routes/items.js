@@ -1,8 +1,15 @@
 const express = require('express')
+const { Item } = require('../models/index')
+//const { sequelize } = require('../db')
+//const { items } = require('../seedData')
+
 const router = express.Router()
-const { Item } = require('../models')
-const { sequelize } = require('../db')
-const { items } = require('../seedData')
+
+router.use(express.json())
+router.use(express.urlencoded({
+    extended: true
+}))
+
 
 // ADD ITEM (CREATE)
 router.post('/', async (req, res, next) => {
