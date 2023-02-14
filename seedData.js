@@ -1,5 +1,5 @@
-{
-    "itemsData": [
+module.expors = {
+    items: [
         {
             "meal": "breakfast",
             "title": "scrambled eggs",
@@ -72,4 +72,4 @@
             "ingredients": "chicken, brown rice, black beans, guacamole, sour cream, pico de gallo, shredded cheese, salsa"
         }
     ]
-}
+};
