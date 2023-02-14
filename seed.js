@@ -14,4 +14,4 @@ const seed = async () => {
 
 seed();
 
-module.export = seed
+
