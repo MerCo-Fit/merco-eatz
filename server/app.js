@@ -1,7 +1,7 @@
 // load environment variables from .env or elsewhere
 require('dotenv').config();
 const express = require('express');
-//const app = express();
+const app = express();
 const morgan = require('morgan');
 const path = require('path');
 const cors = require('cors');
@@ -35,14 +35,6 @@ app.use((error, req, res, next) => {
 module.exports = app;
 
 
-// load environment variables from .env or elsewhere
-require('dotenv').config();
-const express = require('express');
-const app = express();
-const morgan = require('morgan');
-const path = require('path');
-const cors = require('cors');
-
 //Allow CORS requests
 app.use(cors());
 // logging middleware
@@ -55,7 +47,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // api router
-app.use('/api', require('./routes'));
+app.use('/api', require('../routes'));
 
 // 404 handler
 app.use((req, res) => {
