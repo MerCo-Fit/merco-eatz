@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/MerCo-Fit/merco-eatz/issues"
   },
-  "homepage": "https://github.com/MerCo-Fit/merco-eatz#readme"
+  "homepage": "https://github.com/MerCo-Fit/merco-eatz#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "modules": "^0.4.0",
+    "morgan": "^1.10.0",
+    "node": "^19.6.0",
+    "package.json": "^0.0.0",
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4"
+  }
 }
