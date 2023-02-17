@@ -1,5 +1,5 @@
 const express = require('express')
-const { Item } = require('../models/index')
+const { Item } = require('../server/models/index')
 //const { sequelize } = require('../db')
 //const { items } = require('../seedData')
 
