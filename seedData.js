@@ -1,4 +1,4 @@
-module.expors = {
+module.exports = {
     items: [
         {
             "meal": "breakfast",

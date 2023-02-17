@@ -1,5 +1,5 @@
 const {items} = require("./seedData.js");
-const {sequelize} = require("./db");
+const {sequelize} = require("./server/db");
 const {Item} = require("./models");
 
 const seed = async () => {
