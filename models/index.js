@@ -1,5 +1,5 @@
 const {Sequelize} = require('sequelize')
-const {sequelize} = require('../db')
+const {sequelize} = require('../server/db')
 
 const Item = sequelize.define("items", {
     meal: Sequelize.ENUM('Breakfast', 'Lunch', 'Dinner', 'Dessert'),
@@ -10,12 +10,7 @@ const Item = sequelize.define("items", {
 
 //exports
 module.exports = { 
-    Item, 
-    db: sequelize
+    db: sequelize,
+    Item,
 };
 
-
-//meal: DataTypes.ENUM('Breakfast', 'Lunch', 'Dinner', 'Dessert'),
-    // title: DataTypes.STRING,
-    // protein: DataTypes.STRING,
-    // ingredients: DataTypes.STRING,
