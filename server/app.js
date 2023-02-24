@@ -2,9 +2,6 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const morgan = require('morgan');
-const path = require('path');
-const cors = require('cors');
 
 
 //Allow CORS requests
@@ -36,13 +33,6 @@ app.use((error, req, res, next) => {
 module.exports = app;
 
 
-//Allow CORS requests
-app.use(cors());
-// logging middleware
-app.use(morgan('dev'));
-// parsing middleware for form input data & json
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
 // serve up static files (e.g. html and css files)
 app.use(express.static(path.join(__dirname, '../dist')));
