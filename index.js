@@ -13,7 +13,7 @@ const SALT_COUNT = 10;
 
 const port = 3000;
 
-//Allow CORS requests
+//Allow cors requests
 app.use(cors());
 // logging middleware
 app.use(morgan("dev"));
@@ -22,13 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 /////////////////////////////
 
-// const userRouter = require('./routes/users')
-// app.use('/users', userRouter);
-
 const itemRouter = require("./routes/items");
 app.use("/items", itemRouter);
 
-/* ***************** YOUR ROUTE HANDLERS BELOW ***************** */
 // Creating a new User
 app.post("/register", async (req, res, next) => {
   try {
@@ -90,8 +86,6 @@ app.post("/login", async (req, res, next) => {
   }
 });
 
-/////////////////////////////////////
-
 const setUser = async (req, res, next) => {
   try {
     const authHeader = req.header("Authorization");
@@ -108,7 +102,7 @@ const setUser = async (req, res, next) => {
   }
 };
 
-//Adding a new Item//
+// ADD a new Item //
 app.post("/items", setUser, async (req, res, next) => {
   try {
     if (!req.user) {
@@ -171,4 +165,4 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-// POST /items
+
